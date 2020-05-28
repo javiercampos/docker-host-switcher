@@ -1,0 +1,7 @@
+{
+  "Hosts": [
+    "none",
+    "tcp://sample-host:2375",
+    "tcp://other-host:2376"
+  ]  
+}
