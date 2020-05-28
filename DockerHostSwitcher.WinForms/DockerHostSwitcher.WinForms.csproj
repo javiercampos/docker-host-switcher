@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Docker-logo.png" />
+    <None Remove="Docker.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="res\Docker-logo.png" />
+    <EmbeddedResource Include="res\Docker.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="docker-hosts.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
